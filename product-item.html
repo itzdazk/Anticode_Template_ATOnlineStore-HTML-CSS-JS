@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="./assets/css/bootstrap-5.2.3-dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="./assets/icon/fontawesome-free-6.2.1-web/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="/assets/css/base.css" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+
+    <title>ANTICODE - Thương hiệu thời trang thiết kế</title>
+  </head>
+  <body>
+    <header class="header">
+      <!-- Header topbar -->
+      <div class="header__topbar py-2">
+        <div class="container">
+          <div class="row">
+            <div
+              class="header__discount col-12 col-md-8 text-center text-md-start"
+            >
+              <h6>SALE UP TO 50% NGAY HÔM NAY !!!</h6>
+            </div>
+            <div
+              class="header__account col-12 col-md-4 mt-3 mt-md-0 text-center text-md-end"
+            >
+              <a href="#" class="px-3 py-2 bg-white text-black">
+                <span> <i class="fa-solid fa-user me-2"></i> Tài khoản </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Header navbar -->
+      <div class="header__navbar bg-black">
+        <div class="container">
+          <div class="row d-flex justify-content-center">
+            <div class="header__navbar-tmp d-none d-lg-flex col-lg-1"></div>
+            <div
+              class="header__navbar-icon d-flex justify-content-center align-items-center col-3 col-md-2 col-lg-1"
+            >
+              <a href="homepage.html">
+                <img src="assets/img/CODE.gif" alt="" class="img-fluid" />
+              </a>
+            </div>
+
+            <div
+              class="header__navbar-searchbar p-0 d-flex justify-content-center align-items-center col-6 col-md-8"
+            >
+              <form action="" class="search-box w-100 position-relative">
+                <input
+                  type="text"
+                  class="search-text form-control text-white bg-black border rounded-pill py-2"
+                  placeholder="Tìm kiếm..."
+                />
+                <button
+                  class="search-btn position-absolute top-50 end-0 translate-middle-y me-1 border bg-black rounded-pill text-light py-1 px-2"
+                >
+                  <span class="search-btn-span">
+                    <i class="fas fa-search"></i>
+                  </span>
+                </button>
+              </form>
+            </div>
+
+            <div
+              class="header__navbar-tools row d-flex justify-content-center align-items-center col-3 col-md-2 col-lg-2"
+            >
+              <div class="header__navbar-tools__cart col-6 col-lg-12">
+                <button
+                  onclick="showCart()"
+                  class="cart-btn bg-transparent border-0 d-flex justify-content-center align-items-center row"
+                  data-mdb-ripple-color="light"
+                >
+                  <span
+                    class="header__navbar-tools__cart-icon text-light border rounded-pill py-2 col-auto"
+                    ><i class="fa-solid fa-cart-shopping"></i>
+                  </span>
+                  <span
+                    class="header__navbar-tools__cart-items text-start d-none d-lg-block text-light col"
+                  >
+                    <p>Giỏ hàng</p>
+                    <p>0 sản phẩm</p>
+                  </span>
+                </button>
+              </div>
+
+              <div
+                class="header__navbar-tools__expand-menu-xs d-flex d-lg-none col-6"
+              >
+                <button
+                  onclick="showMenu()"
+                  class="expand-menu-xs-btn bg-transparent border-0"
+                >
+                  <span class="text-light bar-icon">
+                    <i class="fa-sharp fa-solid fa-bars display-6"></i>
+                  </span>
+                  <span class="text-light bar-icon-after">
+                    <i
+                      class="fa-sharp fa-solid fa-bars-staggered display-6"
+                    ></i>
+                  </span>
+                </button>
+              </div>
+            </div>
+
+            <div
+              class="header__navbar-menu-lg row d-none d-lg-flex text-light justify-content-center pb-1 ms-4"
+            >
+              <div class="col-auto header__navbar-menu-item">
+                <a href="" class="">Sale</a>
+              </div>
+
+              <div
+                class="col-auto header__navbar-menu-item header__navbar-menu-item-new position-relative"
+              >
+                <a href="" class="header__navbar-menu-item-new-link text-light"
+                  >New Collection
+                  <i class="chevron-down-icon fa-solid fa-chevron-down"></i
+                ></a>
+
+                <!-- header navbar new list what's new  -->
+
+                <div class="header__new">
+                  <div
+                    class="header__new-list bg-light row p-0 list-unstyled shadow-lg bg-body"
+                  >
+                    <a href="" class="header__new-list-item">WEEÉ COLLECTION</a>
+                    <a href="" class="header__new-list-item"
+                      >PINNANCLE COLLECTION</a
+                    >
+                    <a href="" class="header__new-list-item"
+                      >X2 MONOGRAM COLLECTION
+                    </a>
+                    <a href="" class="header__new-list-item"
+                      >THE MUSEUM OF BROKEN HEART COLLECTIOn</a
+                    >
+                    <a href="" class="header__new-list-item">DAILY CLOTHES</a>
+                    <a href="" class="header__new-list-item">DAZK COLLECTION</a>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="col-auto header__navbar-menu-item header__navbar-menu-item-new position-relative"
+              >
+                <a
+                  href="product-list.html"
+                  class="header__navbar-menu-item-new-link text-light"
+                  >Tất cả sản phẩm
+                  <i class="chevron-down-icon fa-solid fa-chevron-down"></i>
+                </a>
+                <div class="header__new">
+                  <div
+                    class="header__new-list bg-light row p-0 list-unstyled shadow-lg bg-body"
+                  >
+                    <a href="" class="header__new-list-item"
+                      >T-Shirts & Polo Shirts</a
+                    >
+                    <a href="" class="header__new-list-item"
+                      >Sweatshirts & Hoodies</a
+                    >
+
+                    <a href="" class="header__new-list-item">Cardigans</a>
+                    <a href="" class="header__new-list-item">Outerwear </a>
+                    <a href="" class="header__new-list-item">Shirts</a>
+                    <a href="" class="header__new-list-item">Croptops</a>
+                    <a href="" class="header__new-list-item">Accesories</a>
+                    <a href="" class="header__new-list-item">Bags</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-auto header__navbar-menu-item">
+                <a href="#">ANTICODE GROUP</a>
+              </div>
+
+              <div class="col-auto header__navbar-menu-item">
+                <a href="#">Hệ thống cửa hàng</a>
+              </div>
+
+              <div class="col-auto header__navbar-menu-item">
+                <a href="#">Câu chuyện thương hiệu</a>
+              </div>
+
+              <div class="col-auto header__navbar-menu-item">
+                <a href="#">Tuyển dụng</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="section mt-4">
+      <div class="container main__product-item">
+        <div class="row d-flex justify-content-center">
+          <div class="col-12 col-md-7 d-lg-flex justify-content-lg-evenly">
+            <section class="wrapper__product-item">
+              <img
+                id="mainPhoto"
+                src="https://product.hstatic.net/1000383583/product/_5506_c92c7c96dd574f61ace222a43a4231d3_master.png"
+              />
+              <div
+                class="image-wrapper flex-wrap d-flex justify-content-between justify-content-lg-start"
+              >
+                <img
+                  class="imgCarousel img-fluid"
+                  src="https://product.hstatic.net/1000383583/product/_5506_c92c7c96dd574f61ace222a43a4231d3_master.png"
+                />
+                <img
+                  class="imgCarousel"
+                  src="https://product.hstatic.net/1000383583/product/_5126_3e8cc86b09944f6c9a905a214586a9bc_master.png"
+                />
+                <img
+                  class="imgCarousel"
+                  src="https://product.hstatic.net/1000383583/product/_5186_0bdbb1ccc0a64329b8bf4ebd148ce0ba_master.png"
+                />
+                <img
+                  class="imgCarousel"
+                  src="https://product.hstatic.net/1000383583/product/_5674_deb517e017944560b6784213ff1bdbd2_master.png"
+                />
+              </div>
+            </section>
+          </div>
+
+          <div class="col-12 col-md-4">
+            <p class="product-item-name">Ao Thun Portrait-Black</p>
+
+            <p class="product-item-sku">SKU:ATTDE2895</p>
+            <hr />
+            <div class="product-price">
+              <p>235.000d</p>
+            </div>
+            <hr />
+            <div class="product-item-size row">
+              <form action="" class="form-circle-radio">
+                <section class="form-circle_section row row-cols-4">
+                  <div class="col-auto">
+                    <div class="col">
+                      <label for="black">Black</label>
+                    </div>
+                    <div class="col-auto">
+                      <input
+                        type="radio"
+                        id="black"
+                        name="product-size"
+                        value="s"
+                        checked
+                      />
+                      <label class="checkmark" for="black"></label>
+                    </div>
+                  </div>
+                  <div class="col-auto">
+                    <div class="col">
+                      <label for="white">White</label>
+                    </div>
+                    <div class="col-auto">
+                      <input
+                        type="radio"
+                        id="white"
+                        name="product-size"
+                        value="s"
+                      />
+                      <label class="checkmark" for="white"></label>
+                    </div>
+                  </div>
+                  <div class="col-auto">
+                    <div class="col">
+                      <label for="html">Blue</label>
+                    </div>
+                    <div class="col-auto">
+                      <input
+                        type="radio"
+                        id="blue"
+                        name="product-size"
+                        value="s"
+                      />
+                      <label class="checkmark" for="blue"></label>
+                    </div>
+                  </div>
+                  <div class="col-auto">
+                    <div class="col">
+                      <label for="html">Red</label>
+                    </div>
+                    <div class="col-auto">
+                      <input
+                        type="radio"
+                        id="red"
+                        name="product-size"
+                        value="s"
+                      />
+                      <label class="checkmark" for="red"></label>
+                    </div>
+                  </div>
+                </section>
+              </form>
+            </div>
+            <hr />
+            <div class="product-item-size row">
+              <form action="" class="form-square-radio">
+                <section class="form-square-section row row-cols-4">
+                  <div class="col-auto">
+                    <input
+                      type="radio"
+                      id="size-s"
+                      name="product-size"
+                      value="s"
+                      checked="true"
+                    />
+                    <label for="size-s">S</label>
+                  </div>
+                  <div class="col-auto">
+                    <input
+                      type="radio"
+                      id="size-m"
+                      name="product-size"
+                      value="m"
+                    />
+                    <label for="size-m">M</label>
+                  </div>
+                  <div class="col-auto">
+                    <input
+                      type="radio"
+                      id="size-l"
+                      name="product-size"
+                      value="l"
+                    />
+                    <label for="size-l">L</label>
+                  </div>
+                  <div class="col-auto">
+                    <input
+                      type="radio"
+                      id="size-xl"
+                      name="product-size"
+                      value="xl"
+                    />
+                    <label for="size-xl">XL</label>
+                  </div>
+                </section>
+              </form>
+            </div>
+            <hr />
+            <div class="product-item-quantity">
+              <div class="input-group input-number-group-quantity">
+                <div class="input-group-button-quantity">
+                  <span class="input-number-decrement">-</span>
+                </div>
+                <input
+                  class="input-number-quantity"
+                  type="number"
+                  value="1"
+                  min="1"
+                  max="1000"
+                />
+                <div class="input-group-button-quantity">
+                  <span class="input-number-increment">+</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="product-item-quantity mt-2">
+              <button class="addcart-item-btn">THEM VAO GIO</button>
+            </div>
+          </div>
+
+          <div class="col-12 mt-5">
+            <hr />
+            <h4 class="my-2">Mô tả</h4>
+            <p>Thông tin sản phẩm:</p>
+            <p class="mt-5">
+              Chất liệu: 100% Cotton - Chất vải mịn, dày dặn, công nghệ in cao
+              cấp mang trải nghiệm tuyệt vời nhất.
+            </p>
+            <p>Màu sắc: Black</p>
+            <p>Size: S/M/L/XL</p>
+            <p class="mt-5">HƯỚNG DẪN VỀ KÍCH THƯỚC (SIZE):</p>
+            <p class="mt-1">
+              Bảng size phù hợp với 89,5% người mua hàng tại XXME nếu bạn muốn
+              mặc vừa người ( size hoàn hảo ). Nếu có nhu cầu mặc rộng hơn, hãy
+              lựa chọn lớn hơn 1 size và muốn mặc chật hơn thì hãy lựa chọn nhỏ
+              hơn 1 size để phù hợp nhất với nhu cầu của bạn nhé.
+            </p>
+            <p class="mt-1">Size S: Chiều cao dưới 1m60, cân nặng dưới 55kg.</p>
+            <p class="mt-1">Size M: Chiều cao dưới 1m70, cân nặng dưới 65kg.</p>
+            <p class="mt-1">Size L: Chiều cao dưới 1m80, cân nặng dưới 78kg.</p>
+            <p class="mt-1">
+              Size XL: Chiều cao trên 1m70, cân nặng dưới 98kg.
+            </p>
+
+            <p class="my-4">
+              𝐗𝐗𝐌𝐄®️ - 𝐓𝐡𝐮̛𝐨̛𝐧𝐠 𝐡𝐢𝐞̣̂𝐮 𝐭𝐡𝐨̛̀𝐢 𝐭𝐫𝐚𝐧𝐠 𝐭𝐡𝐢𝐞̂́𝐭 𝐤𝐞̂́, 𝐬𝐭𝐫𝐞𝐞𝐭 𝐬𝐭𝐲𝐥𝐞 𝐡𝐚̀𝐧𝐠 𝐝𝐚̂̀𝐮
+              𝐝𝐚̀𝐧𝐡 𝐜𝐡𝐨 𝐠𝐢𝐨̛́𝐢 𝐭𝐫𝐞̉.
+            </p>
+            <hr />
+          </div>
+        </div>
+
+        <div class="row mt-5">
+          <div class="wrapper__trending-tittle wrapper_tittle">
+            <h2 class="text-center">SAN PHAM LIEN QUAN</h2>
+          </div>
+        </div>
+
+        <div class="product__main-list mt-5 row row-cols-2 row-cols-lg-3">
+          <div class="product__main-item mt-5 col">
+            <a href="">
+              <img
+                src="assets/img/tshirt-tp.png "
+                alt=""
+                class="item-img img-fluid"
+              />
+              <p class="item-name">Áo thun Enjoy De Live</p>
+              <p class="item-price">350,000đ</p>
+            </a>
+          </div>
+          <div class="product__main-item mt-5 col">
+            <a href="">
+              <img
+                src="assets/img/tshirt-tp.png "
+                alt=""
+                class="item-img img-fluid"
+              />
+              <p class="item-name">Áo thun Enjoy De Live</p>
+              <p class="item-price">350,000đ</p>
+            </a>
+          </div>
+          <div class="product__main-item mt-5 col">
+            <a href="">
+              <img
+                src="assets/img/tshirt-tp.png "
+                alt=""
+                class="item-img img-fluid"
+              />
+              <p class="item-name">Áo thun Enjoy De Live</p>
+              <p class="item-price">350,000đ</p>
+            </a>
+          </div>
+          <div class="product__main-item mt-5 col">
+            <a href="">
+              <img
+                src="assets/img/tshirt-tp.png "
+                alt=""
+                class="item-img img-fluid"
+              />
+              <p class="item-name">Áo thun Enjoy De Live</p>
+              <p class="item-price">350,000đ</p>
+            </a>
+          </div>
+          <div class="product__main-item mt-5 col">
+            <a href="">
+              <img
+                src="assets/img/tshirt-tp.png "
+                alt=""
+                class="item-img img-fluid"
+              />
+              <p class="item-name">Áo thun Enjoy De Live</p>
+              <p class="item-price">350,000đ</p>
+            </a>
+          </div>
+          <div class="product__main-item mt-5 col">
+            <a href="">
+              <img
+                src="assets/img/tshirt-tp.png "
+                alt=""
+                class="item-img img-fluid"
+              />
+              <p class="item-name">Áo thun Enjoy De Live</p>
+              <p class="item-price">350,000đ</p>
+            </a>
+          </div>
+          <div class="product__main-item mt-5 col">
+            <a href="">
+              <img
+                src="assets/img/tshirt-tp.png "
+                alt=""
+                class="item-img img-fluid"
+              />
+              <p class="item-name">Áo thun Enjoy De Live</p>
+              <p class="item-price">350,000đ</p>
+            </a>
+          </div>
+          <div class="product__main-item mt-5 col">
+            <a href="">
+              <img
+                src="assets/img/tshirt-tp.png "
+                alt=""
+                class="item-img img-fluid"
+              />
+              <p class="item-name">Áo thun Enjoy De Live</p>
+              <p class="item-price">350,000đ</p>
+            </a>
+          </div>
+          <div class="product__main-item mt-5 col">
+            <a href="">
+              <img
+                src="assets/img/tshirt-tp.png "
+                alt=""
+                class="item-img img-fluid"
+              />
+              <p class="item-name">Áo thun Enjoy De Live</p>
+              <p class="item-price">350,000đ</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer mt-5">
+      <div class="footer__contacts pt-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-6 col-md-3 footer__contacts-col">
+              <h5 class="contacts--tittle">GIỚI THIỆU</h5>
+              <p class="contats--pa">
+                ANTICODE là thương hiệu được thành lập dựa trên niềm đam mê thời
+                trang streetwear, với mục đích lan toả phong cách, xu hướng thời
+                trang tương lai đến giới trẻ Việt Nam. Nhằm giúp thế hệ trẻ
+                khẳng định được sự tinh tế, chỉnh chu trong cách ăn mặc. Đồng
+                thời giúp các bạn cập nhật được xu hướng ăn mặc thịnh hành trên
+                thế giới một cách nhanh nhất, chất lượng tốt nhất thông qua
+                brand ANTICODE
+              </p>
+              <p class="contats--pa">
+                Hi vọng ANTICODE sẽ càng lúc càng đem xu hướng thời trang thế
+                giới về Việt Nam sớm nhất, nhanh nhất theo một phong cách riêng
+                do chính ANTICODE thiết kế.
+              </p>
+            </div>
+
+            <div class="col-6 col-md-3 footer__contacts-col">
+              <h5 class="contacts--tittle">XEM THÊM</h5>
+              <ul class="contats--pa-list">
+                <li class="contats--pa contats--pa-item">
+                  <a href="">Hệ thống cửa hàng</a>
+                </li>
+                <li class="contats--pa contats--pa-item">
+                  <a href="">Tìm kiếm</a>
+                </li>
+                <li class="contats--pa contats--pa-item">
+                  <a href=""> Giới thiệu</a>
+                </li>
+                <li class="contats--pa contats--pa-item">
+                  <a href=""> Chính sách đổi trả</a>
+                </li>
+                <li class="contats--pa contats--pa-item">
+                  <a href="">Chính sách bảo mật</a>
+                </li>
+                <li class="contats--pa contats--pa-item">
+                  <a href="">Điều khoản dịch vụ</a>
+                </li>
+                <li class="contats--pa contats--pa-item">
+                  <a href="">Chính sách vận chuyển</a>
+                </li>
+                <li class="contats--pa contats--pa-item">
+                  <a href="">Chính sách thanh toán</a>
+                </li>
+                <li class="contats--pa contats--pa-item">
+                  <a href="">Tuyển dụng nhân sự</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-6 col-md-3 footer__contacts-col">
+              <h5 class="contacts--tittle">THÔNG TIN LIÊN HỆ</h5>
+              <p class="contats--pa">
+                ANTICODE - Thương hiệu thời trang thiết kế, street style dành
+                cho giới trẻ.
+              </p>
+              <p class="contats--pa">
+                <i class="fa-solid fa-location-dot"></i> ANTICODE Sài Gòn :
+                <br />
+                - 264 Tân Sơn Nhì, quận Tân Phú - #Thenewplayground 26 Lý Tự
+                Trọng, quận 1. <br />
+                - #Thenewplayground Central Market cổng đường Lê Lai, quận 1 (
+                đối diện 90 Lê Lai ). <br />
+                - #GTown 136 Nguyễn Hồng Đào, quận Tân Bình.
+              </p>
+              <p class="contats--pa">
+                <i class="fa-solid fa-phone"></i> 000 000 0000
+              </p>
+              <p class="contats--pa">
+                <i class="fa-solid fa-address-book"></i> xxx xxxx xxxxx
+              </p>
+
+              <p class="contats--pa">
+                <i class="fa-solid fa-envelope"></i> anticode.vn@gmail.com
+              </p>
+            </div>
+
+            <div class="col-6 col-md-3 footer__contacts-col px-4">
+              <h5 class="contacts--tittle">FANPAGE</h5>
+
+              <div class="row gx-0 contacts-button-group">
+                <a class="col-4">
+                  <button class="button-contacts-icon">
+                    <i class="fa-brands fa-facebook-f"></i>
+                  </button>
+                </a>
+                <a class="col-4">
+                  <button class="button-contacts-icon">
+                    <i class="fa-brands fa-instagram"></i>
+                  </button>
+                </a>
+
+                <a class="col-4">
+                  <button class="button-contacts-icon">
+                    <i class="fab fa-linkedin-in"></i>
+                  </button>
+                </a>
+
+                <a class="col-4">
+                  <button class="button-contacts-icon">
+                    <i class="fa-brands fa-wolf-pack-battalion"></i>
+                  </button>
+                </a>
+
+                <a class="col-4">
+                  <button class="button-contacts-icon">
+                    <i class="fa-brands fa-twitter"></i>
+                  </button>
+                </a>
+
+                <a class="col-4">
+                  <button class="button-contacts-icon">
+                    <i class="fa-solid fa-p"></i>
+                  </button>
+                </a>
+              </div>
+
+              <div
+                class="row mt-4 h-50 justify-content-center align-items-center"
+              >
+                <div id="coin">
+                  <div class="side-a"></div>
+                  <div class="side-b"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__letter">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="footer__letter-area col-10 col-lg-8 row">
+              <div
+                class="letter-area-left col-12 col-lg-5 d-flex justify-content-center justify-content-lg-start align-items-center"
+              >
+                <span class="letter-icon">
+                  <i class="fa-solid fa-envelope"></i>
+                </span>
+                <h4 class="letter-tittle">Đăng ký nhận tin</h4>
+              </div>
+
+              <div
+                class="letter-area-right col-12 col-lg-7 d-flex align-items-center justify-content-between"
+              >
+                <input
+                  type="text"
+                  class="text__email-receive"
+                  placeholder="Nhập email của bạn..."
+                />
+                <button class="submit-btn-email">
+                  <i class="fa-regular fa-envelope"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer_copyright">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col footer_copyright-col">
+              Copyright © 2023 ANTICODE. Powered by Dazk
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- hidden menu xs -->
+
+    <div class="modal menu__modal">
+      <div class="modal__overlay menu__overlay" onclick="hideHiddenBar()"></div>
+      <div class="modal__body menu__body">
+        <div class="modal__inner">
+          <div class="header__navbar-hidden-menu">
+            <h5 class="hidden-menu-tittle">MENU</h5>
+            <ul class="hidden-menu-list">
+              <li class="hidden-menu-item">
+                <a href="" class=""> <p>Sale</p> </a>
+              </li>
+              <li class="hidden-menu-item item-dropdown">
+                <a href="" class="">
+                  <p>
+                    What's New
+                    <span
+                      ><i class="chevron-down-icon fa-solid fa-angle-down"></i
+                    ></span>
+                  </p>
+                </a>
+                <ul class="hidden-menu-item-list new-collection-list">
+                  <li class="hidden-menu-item-item">
+                    <a href=""> <p>WEEÉ COLLECTION</p> </a>
+                  </li>
+                  <li class="hidden-menu-item-item">
+                    <a href=""><p>PINANNCLE COLLECTION</p> </a>
+                  </li>
+                  <li class="hidden-menu-item-item">
+                    <a href=""> <p>X2 MONOGRAM COLLECTION</p> </a>
+                  </li>
+                  <li class="hidden-menu-item-item">
+                    <a href="">
+                      <p>THE MUSEUM OF BROKEN HEART COLLECTION</p>
+                    </a>
+                  </li>
+                  <li class="hidden-menu-item-item">
+                    <a href=""> <p>DAILY CLOTHES</p> </a>
+                  </li>
+                  <li class="hidden-menu-item-item">
+                    <a href=""> <p>DAZK COLLECTION</p> </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="hidden-menu-item item-dropdown">
+                <a href="" class="">
+                  <p>
+                    Tất cả sản phẩm
+                    <span
+                      ><i class="chevron-down-icon fa-solid fa-angle-down"></i
+                    ></span>
+                  </p>
+                </a>
+                <ul class="hidden-menu-item-list new-collection-list">
+                  <li class="hidden-menu-item-item">
+                    <a href=""> <p>READY-TO-WEAR</p> </a>
+                  </li>
+                  <li class="hidden-menu-item-item">
+                    <a href=""><p>ACCESSORIES</p> </a>
+                  </li>
+                  <li class="hidden-menu-item-item">
+                    <a href=""> <p>BAGS</p> </a>
+                  </li>
+                  <li class="hidden-menu-item-item">
+                    <a href="">
+                      <p>DAILY CLOTHES</p>
+                    </a>
+                  </li>
+                  <li class="hidden-menu-item-item">
+                    <a href=""> <p>SIGNATURE</p> </a>
+                  </li>
+                  <li class="hidden-menu-item-item">
+                    <a href=""> <p>DAZK COLLECTION</p> </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="hidden-menu-item">
+                <a href="" class=""> <p>ANTICODE GROUP</p> </a>
+              </li>
+              <li class="hidden-menu-item">
+                <a href="" class=""> <p>Hệ thống cửa hàng</p> </a>
+              </li>
+              <li class="hidden-menu-item">
+                <a href="" class=""> <p>Câu chuyện thương hiệu</p> </a>
+              </li>
+              <li class="hidden-menu-item">
+                <a href="" class=""> <p>Tuyển dụng</p> </a>
+              </li>
+            </ul>
+          </div>
+          <div class="header__navbar-hidden-cart">
+            <h5 class="hidden-menu-tittle">GIỎ HÀNG</h5>
+            <div class="cart-item">
+              <div class="container">
+                <div class="row px-3">
+                  <div class="col">
+                    <p>Hiện chưa có sản phẩm</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="price_total">
+              <div class="container">
+                <div class="row px-4">
+                  <div class="col">
+                    <h4>TỔNG TIỀN:</h4>
+                  </div>
+                  <div class="col">
+                    <h4 class="text-end">0đ</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="button-group">
+              <div class="container">
+                <div class="row px-3 row-btn">
+                  <div class="col">
+                    <button>XEM GIỎ HÀNG</button>
+                  </div>
+                  <div class="col">
+                    <button>THANH TOÁN</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  f
+
+  <script src="./assets/css/bootstrap-5.2.3-dist/js/bootstrap.min.js"></script>
+  <script src="./assets/css/bootstrap-5.2.3-dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="./assets/js/main.js"></script>
+</html>
